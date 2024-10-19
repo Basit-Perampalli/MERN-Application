@@ -36,7 +36,7 @@ app.get('/api/seed', async (req, res) => {
       query.$or = [
         { title: new RegExp(search, 'i') },
         { description: new RegExp(search, 'i') },
-        { price: new RegExp(search, 'i') }
+        // { price: new RegExp(search, 'i') }
       ];
     }
     const products = await Product.find(query)
